@@ -1,0 +1,55 @@
+@import url('../../App.css');
+
+.task-item-card {
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  padding: 0 4px;
+}
+
+.card-options {
+  margin: 5px 0;
+  padding: 0 4px;
+  min-height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-options button {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .task-item-card {
+    padding: 4px;
+    min-height: 56px;
+  }
+  .text {
+    font-size: 1rem;
+  }
+  .card-options {
+    margin: 0;
+    padding: 0 2px;
+    min-height: 15px;
+  }
+  .card-options button {
+    font-size: 6px;
+    margin: 0;
+    padding: 0;
+  }
+}

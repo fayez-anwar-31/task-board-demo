@@ -1,0 +1,110 @@
+@import url('../../App.css');
+
+.task-list-container {
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+  height: calc(100vh - 189px);
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1.2px solid var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+.task-list-header span {
+  align-self: center;
+}
+
+.task-list-header button {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.task-list-header button svg {
+  cursor: pointer;
+}
+
+.no-task-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 1.1rem;
+  height: calc(100vh - 248px);
+  margin: 0 0;
+  color: var(--color-primary);
+  background-color: var(--color-tertiary);
+}
+
+.tasks-ul {
+  list-style: none;
+  padding: 0 1.5rem;
+  margin: 1rem 0;
+}
+
+.task-list-content {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: row;
+  grid-template-columns: unset; /* do not set template columns and rows */
+  grid-template-rows: unset;
+  overflow: scroll;
+  height: calc(100vh - 248px);
+  align-items: flex-start;
+}
+
+.delete-all-svg-primary {
+  fill: var(--color-primary);
+}
+
+.drag-target-active {
+  background-color: var(--color-tertiary);
+}
+
+@media (max-width: 768px) {
+  .task-list-container {
+    border-radius: 1px;
+    min-height: calc(100vh - 141px);
+  }
+
+  .task-list-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-bottom: 0.6px solid var(--color-primary);
+  }
+
+  .task-list-header button {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 0.5rem;
+    font-weight: bold;
+  }
+
+  .no-task-items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 1.1rem;
+    min-height: calc(100vh - 190px);
+
+    margin: 0 0;
+    color: var(--color-primary);
+    background-color: var(--color-tertiary);
+  }
+
+  .task-list-content {
+    min-height: calc(100vh - 178px);
+  }
+}

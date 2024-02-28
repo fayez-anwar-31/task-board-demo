@@ -1,0 +1,14 @@
+@import url('../../App.css');
+
+.input-tag-color {
+  vertical-align: middle;
+}
+
+.select-input:hover {
+  border-color: var(--color-primary) !important;
+}
+
+/* .add-update-button {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+} */

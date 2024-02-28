@@ -1,0 +1,192 @@
+:root {
+  /* --color-primary: #ff7b54;
+  --color-secondary: #ffffff;
+  --color-tertiary: #f9e9e2; */
+
+  --color-primary: #1677ff;
+  --color-primary-active: #0958d9;
+  --color-primary-hover: #4096ff;
+  --color-foucs-visisble: #91caff;
+  --color-secondary: #ffffff;
+  --color-tertiary: #d6d7ec;
+}
+
+* {
+  font-family: monospace;
+}
+
+.ant-btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.ant-btn-default {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* .ant-btn-primary:active {
+  background-color: var(--color-primary-active);
+  color: var(--color-secondary);
+} */
+
+/* .ant-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-secondary);
+} */
+
+/* .ant-btn-primary:focus-visible {
+  outline-color: var(--color-foucs-visisble);
+} */
+
+.ant-input:focus,
+.ant-input:focus-within,
+.ant-input:hover {
+  border-color: var(--color-primary);
+}
+
+.ant-select:focus,
+.ant-select:focus-within,
+.ant-select:hover {
+  border-color: var(--color-secondary);
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 72px 72px 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 6px;
+  grid-template-areas:
+    'heading heading heading'
+    'inputBar inputBar inputBar'
+    'task-lists task-lists task-lists';
+  height: 100vh;
+}
+
+.heading {
+  grid-area: heading;
+}
+.inputBar {
+  grid-area: inputBar;
+}
+.no-tasks {
+  grid-area: task-lists;
+}
+.task-lists {
+  grid-area: task-lists;
+}
+
+.heading {
+  margin-bottom: 10px;
+  background-color: var(--color-primary);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading h1 {
+  color: var(--color-secondary);
+  padding: 0 2rem;
+  margin: 1rem 0;
+  align-self: center;
+}
+.heading button {
+  align-self: center;
+  padding: 0;
+  margin: 1rem 0;
+  background: none;
+  border: none;
+}
+
+.heading button svg {
+  align-self: center;
+  padding: 0 2.5rem;
+  cursor: pointer;
+}
+
+.inputBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0 2rem;
+}
+
+.no-tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  background-color: var(--color-tertiary);
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.task-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 4px;
+  grid-row-gap: 0px;
+  margin: 0 2rem 2rem 2rem;
+  padding: 4px;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+
+.delete-all-svg-secondary {
+  fill: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .App {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 56px 56px 1fr;
+    grid-template-areas:
+      'heading heading heading'
+      'inputBar inputBar inputBar'
+      'task-lists task-lists task-lists';
+  }
+  .task-lists {
+    grid-template-columns: 1fr;
+  }
+  .task-lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2px;
+    grid-row-gap: 0px;
+    margin: 0 1rem 1rem 1rem;
+    padding: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-rows: 72px 72px 1fr;
+    grid-template-areas:
+      'heading'
+      'inputBar'
+      'task-lists';
+  }
+  .task-lists {
+    grid-template-columns: 1fr;
+  }
+  .task-lists {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2px;
+    grid-row-gap: 0px;
+    margin: 0 1rem;
+    padding: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+  }
+}
